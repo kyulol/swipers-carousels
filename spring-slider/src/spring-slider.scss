@@ -1,0 +1,8 @@
+@import 'swiper/scss';
+@import 'swiper/scss/effect-creative';
+
+.spring-slider {
+  .swiper-slide {
+    transition-timing-function: cubic-bezier(.76, .09, .215, 1);
+  }
+}

@@ -1,0 +1,69 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #26213d;
+  color: #fff;
+  line-height: 1.5;
+  font-family: -apple-system, system-ui, 'Helvetica Neue', Helvetica, Arial,
+    'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#app {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Custom sizes for demo
+.triple-slider {
+  padding: 32px 0;
+  .swiper {
+    width: 90%;
+    max-width: 640px;
+    height: 320px;
+    border-radius: 8px;
+  }
+  .bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .logo-image {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+  }
+  .logo-image-1 {
+    width: 310px;
+    margin-left: -155px;
+  }
+  .logo-image-2 {
+    width: 146px;
+    margin-left: -73px;
+  }
+  .logo-image-3 {
+    width: 262px;
+    margin-left: -131px;
+  }
+  .logo-image-4 {
+    width: 196px;
+    margin-left: -98px;
+  }
+  .logo-image-5 {
+    width: 320px;
+    margin-left: -160px;
+  }
+  .logo-image {
+    @media (max-width: 480px) {
+      width: 160px;
+      margin-left: -80px;
+    }
+  }
+}

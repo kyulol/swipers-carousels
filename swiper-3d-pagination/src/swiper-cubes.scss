@@ -1,0 +1,58 @@
+@import 'swiper/scss';
+@import 'swiper/scss/effect-cube';
+@import 'swiper/scss/effect-coverflow';
+
+// Cubes Pagination
+.swiper-cubes-pagination {
+  display: flex;
+  margin-top: 24px;
+  .swiper {
+    width: 100%;
+    flex-shrink: 10;
+    min-width: 0;
+    margin-left: 24px;
+    cursor: pointer;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .swiper-slide img {
+    border: 2px solid #f06eff;
+  }
+  .swiper-slide-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1d1c23;
+    color: #f06eff;
+    line-height: 1;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+.swiper-all-cubes {
+  perspective: 1200px;
+  .swiper-3d {
+    perspective: none;
+    transform-style: preserve-3d;
+  }
+  .swiper-cubes-pagination .swiper-slide {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+.swiper-coverflow-cubes {
+  position: relative;
+  // prettier-ignore
+  .swiper-main {
+    -webkit-box-reflect: below 5px -webkit-linear-gradient(bottom, rgba(255, 0, 0, 0.2) 0%, transparent 10%, transparent 100%);
+  }
+  .swiper-cubes-pagination {
+    position: absolute;
+    left: 24px;
+    bottom: 16px;
+    right: 24px;
+    z-index: 10;
+  }
+}

@@ -1,0 +1,36 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #000;
+  color: #fff;
+  line-height: 1.5;
+  font-family: -apple-system, system-ui, 'Helvetica Neue', Helvetica, Arial,
+    'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#app {
+  height: 100%;
+}
+
+// custom content styles
+.slide-inner {
+  padding: 16px;
+}
+.slide-image {
+  width: 128px;
+  height: 128px;
+}
+.slide-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 24px 0;
+}
+.slide-text {
+  font-size: 18px;
+}

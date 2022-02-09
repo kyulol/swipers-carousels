@@ -1,0 +1,28 @@
+html,
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100%;
+  background: #121212;
+  color: #fff;
+  font-family: -apple-system, -apple-system, system-ui, 'Helvetica Neue',
+    Helvetica, Arial, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2 {
+  text-align: center;
+}
+h2 {
+  font-size: 36px;
+}
+.container {
+  max-width: 480px;
+  margin: 80px auto;
+  padding: 0 16px;
+}

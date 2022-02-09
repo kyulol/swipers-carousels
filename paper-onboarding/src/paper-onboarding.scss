@@ -1,0 +1,48 @@
+@import 'swiper/scss';
+@import 'swiper/scss/effect-creative';
+@import 'swiper/scss/pagination';
+
+.paper-onboarding {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  --swiper-theme-color: #fff;
+  .swiper-pagination-bullet {
+    background: #fff;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .slide-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    text-align: center;
+  }
+  .paper-onboarding-fills {
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+  }
+  .paper-onboarding-fills,
+  .paper-onboarding-fill {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+  }
+  .paper-onboarding-fill {
+    left: 0;
+    top: 0;
+    transform-origin: center center;
+    border-radius: 50%;
+  }
+}

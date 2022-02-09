@@ -1,0 +1,56 @@
+@import 'swiper/scss/pagination';
+@import 'swiper/scss/navigation';
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fffae8;
+}
+body {
+  background: #fffae8;
+  color: #fff;
+  line-height: 1.5;
+  font-family: -apple-system, system-ui, 'Helvetica Neue', Helvetica, Arial,
+    'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#app {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Custom styles for demo
+.spring-slider {
+  --swiper-navigation-color: #803205;
+  --swiper-pagination-color: #803205;
+  --swiper-pagination-bullet-inactive-color: #803205;
+  width: 100%;
+  height: 320px;
+  position: relative;
+  .swiper-pagination {
+    bottom: 0;
+    margin-bottom: -32px;
+  }
+  .swiper {
+    height: 100%;
+    width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+  .swiper-slide {
+    box-sizing: border-box;
+    padding: 0 24px;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}

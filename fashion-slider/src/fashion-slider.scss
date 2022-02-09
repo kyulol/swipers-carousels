@@ -1,0 +1,174 @@
+@import 'swiper/scss';
+@import 'swiper/scss/parallax';
+
+:root {
+  --fashion-slider-font-family: sans-serif;
+  --fashion-slider-button-side-offset: 32px;
+  --fashion-slider-button-mobile-side-offset: 24px;
+  --fashion-slider-button-mobile-bottom-offset: 16px;
+  --fashion-slider-title-font-size: 80px;
+  --fashion-slider-title-line-height: 1.2;
+}
+
+.fashion-slider {
+  width: 100%;
+  height: 100%;
+  font-family: var(--fashion-slider-font-family);
+  &-no-transition {
+    transition-duration: 0ms !important;
+    transition-delay: 0ms !important;
+    transition-property: none !important;
+    *:not(.swiper-wrapper) {
+      transition-duration: 0ms !important;
+      transition-delay: 0ms !important;
+      transition-property: none !important;
+    }
+    .swiper-wrapper {
+      transition-delay: 0ms !important;
+    }
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+    transition: 1s background-color 1.3s;
+  }
+  .swiper-wrapper {
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+  }
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.fashion-slider-title {
+  transition-delay: 1s;
+  z-index: 10;
+  &-text {
+    font-weight: 700;
+    font-size: var(--fashion-slider-title-font-size);
+    line-height: var(--fashion-slider-title-line-height);
+    letter-spacing: -1px;
+    color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke: 2px #fff;
+  }
+}
+.fashion-slider-scale {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: scale(0.6, 0.6);
+  transition-duration: 1s;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+  opacity: 0.9;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2, 1.2) translateX(50%);
+    transition-timing-function: cubic-bezier(0.5, 0, 0, 1);
+    transition-property: transform;
+  }
+}
+
+// Navigation Buttons
+.fashion-slider-button {
+  transition: 0.5s;
+  outline: none;
+  position: absolute;
+  width: 140px;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  svg {
+    display: block;
+    transition: 0.5s;
+  }
+  .fashion-slider-svg-circle-wrap {
+    transition: 0.5s;
+    transform-origin: -20px 40px;
+    opacity: 1;
+  }
+  circle {
+    transition: 0.5s;
+    stroke-width: 2px;
+    stroke: #fff;
+    fill: none;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    opacity: 1;
+    transform-origin: 0px 0px 0px;
+  }
+  .fashion-slider-svg-arrow {
+    transition: 0.5s;
+    fill: #fff;
+    transform: rotateY(180deg) translate(-55px, 36.1px) scale(1.75);
+  }
+
+  &-prev {
+    left: var(--fashion-slider-button-side-offset);
+  }
+  &-next {
+    right: var(--fashion-slider-button-side-offset);
+  }
+  @media (max-width: 640px) {
+    top: auto;
+    bottom: var(--fashion-slider-button-mobile-bottom-offset);
+    transform: none;
+    &-prev {
+      left: var(--fashion-slider-button-mobile-side-offset);
+    }
+    &-next {
+      right: var(--fashion-slider-button-mobile-side-offset);
+    }
+  }
+  &-disabled {
+    opacity: 0.2;
+    cursor: default;
+  }
+
+  .fashion-slider-svg-wrap {
+    transform: translateY(353px);
+  }
+
+  &-next .fashion-slider-svg-wrap {
+    transform: translateY(353px) rotateY(180deg);
+    transform-origin: 80px 0px 0px;
+  }
+
+  .fashion-slider-svg-line {
+    transition: 0.5s;
+    stroke: #fff;
+    stroke-width: 2;
+    transform: translate(50px, 42px);
+  }
+
+  &-prev:not(&-disabled):hover svg {
+    transform: translateX(-16px);
+  }
+  &-next:not(&-disabled):hover svg {
+    transform: translateX(16px);
+  }
+  &:not(&-disabled):hover {
+    .fashion-slider-svg-circle-wrap {
+      transform: scale(1.1);
+    }
+    circle {
+      stroke-dasharray: 4px;
+      stroke-dashoffset: 4px;
+      opacity: 1;
+    }
+    .fashion-slider-svg-arrow {
+      transform: rotateY(180deg) translate(-40px, 36.1px) scale(1.75);
+    }
+    .fashion-slider-svg-line {
+      transform: translate(35px, 42px) scaleX(0.5);
+    }
+  }
+}

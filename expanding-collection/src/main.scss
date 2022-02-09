@@ -1,0 +1,102 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: linear-gradient(to bottom, #cfd5e6, #a0a1b9);
+  color: #333;
+  line-height: 1.5;
+  font-family: -apple-system, system-ui, 'Helvetica Neue', Helvetica, Arial,
+    'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#app {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Custom sizes for demo
+.expanding-collection {
+  width: 100%;
+  height: 100%;
+  .swiper-slide {
+    width: 600px;
+    max-width: calc(100% - 32px - 32px);
+  }
+
+  &-cover {
+    color: #fff;
+    @media (orientation: portrait) {
+      img {
+        height: 40vh;
+        object-fit: cover;
+      }
+    }
+  }
+  .demo-cover-title {
+    box-sizing: border-box;
+    padding: 8px 16px;
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    font-weight: 600;
+  }
+  .demo-cover-coords {
+    padding: 8px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .demo-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .demo-content-title {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    width: 100%;
+  }
+  .demo-content-avatars {
+    display: flex;
+    img {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      border: 4px solid #fff;
+      + img {
+        margin-left: -16px;
+      }
+    }
+  }
+  .demo-content-rating {
+    display: flex;
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
